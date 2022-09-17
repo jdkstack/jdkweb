@@ -25,7 +25,7 @@
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <!--  1:暂时利用这个操作Json,未来使用An tlr4 Json代替-->
-      <version>2.11.1</version>
+      <version>2.12.6.1</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
