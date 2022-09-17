@@ -1,0 +1,283 @@
+
+<html>
+<head>
+    <style>
+body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}
+  table {
+    width: 100%;
+  }
+  td.page-title {
+    text-align: center;
+    vertical-align: top;
+    font-family:sans-serif,Tahoma,Arial;
+    font-weight: bold;
+    background: white;
+    color: black;
+  }
+  td.title {
+    text-align: left;
+    vertical-align: top;
+    font-family:sans-serif,Tahoma,Arial;
+    font-style:italic;
+    font-weight: bold;
+    background: #D2A41C;
+  }
+  td.header-left {
+    text-align: left;
+    vertical-align: top;
+    font-family:sans-serif,Tahoma,Arial;
+    font-weight: bold;
+    background: #FFDC75;
+  }
+  td.header-center {
+    text-align: center;
+    vertical-align: top;
+    font-family:sans-serif,Tahoma,Arial;
+    font-weight: bold;
+    background: #FFDC75;
+  }
+  td.row-left {
+    text-align: left;
+    vertical-align: middle;
+    font-family:sans-serif,Tahoma,Arial;
+    color: black;
+  }
+  td.row-center {
+    text-align: center;
+    vertical-align: middle;
+    font-family:sans-serif,Tahoma,Arial;
+    color: black;
+  }
+  td.row-right {
+    text-align: right;
+    vertical-align: middle;
+    font-family:sans-serif,Tahoma,Arial;
+    color: black;
+  }
+  TH {
+    text-align: center;
+    vertical-align: top;
+    font-family:sans-serif,Tahoma,Arial;
+    font-weight: bold;
+    background: #FFDC75;
+  }
+  TD {
+    text-align: center;
+    vertical-align: middle;
+    font-family:sans-serif,Tahoma,Arial;
+    color: black;
+  }
+  form {
+    margin: 1;
+  }
+  form.inline {
+    display: inline;
+  }
+</style>
+    <title>/host-manager</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<table cellspacing="4" border="0">
+    <tr>
+        <td colspan="2">
+            <a href="https://tomcat.apache.org/" rel="noopener noreferrer">
+                <img border="0" alt="The Tomcat Servlet/JSP Container"
+                     align="left" src="/host-manager/images/tomcat.gif">
+            </a>
+            <a href="https://www.apache.org/" rel="noopener noreferrer">
+                <img border="0" alt="The Apache Software Foundation" align="right"
+                     src="/host-manager/images/asf-logo.svg" style="width: 266px; height: 83px;">
+            </a>
+        </td>
+    </tr>
+</table>
+<hr size="1" noshade="noshade">
+<table cellspacing="4" border="0">
+    <tr>
+        <td class="page-title" bordercolor="#000000" align="left" nowrap>
+            <font size="+2">Tomcat Virtual Host Manager</font>
+        </td>
+    </tr>
+</table>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="3">
+    <tr>
+        <td class="row-left" width="10%"><small><strong>Message:</strong></small>&nbsp;</td>
+        <td class="row-left"><pre>OK</pre></td>
+    </tr>
+</table>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="3">
+    <tr>
+        <td colspan="4" class="title">Host Manager</td>
+    </tr>
+    <tr>
+        <td class="row-left"><a href="/host-manager/html/list?org.apache.catalina.filters.CSRF_NONCE=6D7D275491420A4EBC98337D92CF1C14">List Virtual Hosts</a></td>
+        <td class="row-center"><a href="/host-manager/../docs/html-host-manager-howto.html" rel="noopener noreferrer">HTML Host Manager Help</a></td>
+        <td class="row-center"><a href="/host-manager/../docs/host-manager-howto.html" rel="noopener noreferrer">Host Manager Help</a></td>
+        <td class="row-right"><a href="/manager/status?org.apache.catalina.filters.CSRF_NONCE=6D7D275491420A4EBC98337D92CF1C14">Server Status</a></td>
+    </tr>
+</table>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="3">
+    <tr>
+        <td colspan="5" class="title">Host name</td>
+    </tr>
+    <tr>
+        <td class="header-left"><small>Host name</small></td>
+        <td class="header-center"><small>Host aliases</small></td>
+        <td class="header-center"><small>Commands</small></td>
+    </tr>
+    <tr>
+        <td class="row-left"><small><a href="http://localhost" rel="noopener noreferrer">localhost</a></small></td>
+        <td class="row-center"><small>&nbsp;</small></td>
+        <td class="row-left">
+            <small>Host Manager installed - commands disabled</small>
+        </td>
+    </tr>
+</table>
+<br>
+<table border="1" cellspacing="0" cellpadding="3">
+    <tr>
+        <td colspan="2" class="title">Add Virtual Host</td>
+    </tr>
+    <tr>
+        <td colspan="2" class="header-left"><small>Host</small></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <form method="post" action="/host-manager/html/add?org.apache.catalina.filters.CSRF_NONCE=6D7D275491420A4EBC98337D92CF1C14">
+                <table cellspacing="0" cellpadding="3">
+                    <tr>
+                        <td class="row-right">
+                            <small>Name:</small>
+                        </td>
+                        <td class="row-left">
+                            <input type="text" name="name" size="20">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="row-right">
+                            <small>Aliases:</small>
+                        </td>
+                        <td class="row-left">
+                            <input type="text" name="aliases" size="64">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="row-right">
+                            <small>App base:</small>
+                        </td>
+                        <td class="row-left">
+                            <input type="text" name="appBase" size="64">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="row-right">
+                            <small>AutoDeploy</small>
+                        </td>
+                        <td class="row-left">
+                            <input type="checkbox" name="autoDeploy" checked>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="row-right">
+                            <small>DeployOnStartup</small>
+                        </td>
+                        <td class="row-left">
+                            <input type="checkbox" name="deployOnStartup" checked>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="row-right">
+                            <small>DeployXML</small>
+                        </td>
+                        <td class="row-left">
+                            <input type="checkbox" name="deployXML" checked>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="row-right">
+                            <small>UnpackWARs</small>
+                        </td>
+                        <td class="row-left">
+                            <input type="checkbox" name="unpackWARs" checked>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="row-right">
+                            <small>Manager App</small>
+                        </td>
+                        <td class="row-left">
+                            <input type="checkbox" name="manager" checked>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="row-right">
+                            <small>CopyXML</small>
+                        </td>
+                        <td class="row-left">
+                            <input type="checkbox" name="copyXML" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="row-right">
+                            &nbsp;
+                        </td>
+                        <td class="row-left">
+                            <input type="submit" value="Add">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+</table>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="3">
+    <tr>
+        <td class="title">Persist configuration</td>
+    </tr>
+    <tr>
+        <td class="row-left">
+            <form class="inline" method="POST" action="/host-manager/html/persist?org.apache.catalina.filters.CSRF_NONCE=6D7D275491420A4EBC98337D92CF1C14">   <small><input type="submit" value="All"></small>  </form> Save current configuration (including virtual hosts) to server.xml and per web application context.xml files
+        </td>
+    </tr>
+</table>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="3">
+    <tr>
+        <td colspan="6" class="title">Server Information</td>
+    </tr>
+    <tr>
+        <td class="header-center"><small>Tomcat Version</small></td>
+        <td class="header-center"><small>JVM Version</small></td>
+        <td class="header-center"><small>JVM Vendor</small></td>
+        <td class="header-center"><small>OS Name</small></td>
+        <td class="header-center"><small>OS Version</small></td>
+        <td class="header-center"><small>OS Architecture</small></td>
+    </tr>
+    <tr>
+        <td class="row-center"><small>Apache Tomcat/9.0.37</small></td>
+        <td class="row-center"><small>11+28</small></td>
+        <td class="row-center"><small>Oracle Corporation</small></td>
+        <td class="row-center"><small>Windows 10</small></td>
+        <td class="row-center"><small>10.0</small></td>
+        <td class="row-center"><small>amd64</small></td>
+    </tr>
+</table>
+<br>
+
+<hr size="1" noshade="noshade">
+<center><font size="-1" color="#525D76">
+    <em>Copyright &copy; 1999-2020, Apache Software Foundation</em></font></center>
+
+</body>
+</html>
