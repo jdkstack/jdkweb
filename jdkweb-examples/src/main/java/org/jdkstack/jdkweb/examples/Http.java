@@ -14,8 +14,12 @@ import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLParameters;
 import javax.net.ssl.TrustManagerFactory;
+import org.jdkstack.logging.jdklog.api.spi.Log;
+import org.jdkstack.logging.jdklog.core.factory.LogFactory;
 
 public class Http {
+
+  private static final Log LOG = LogFactory.getLog(Http.class);
 
   public static void main(String[] args) throws Exception {
     char[] passphrase = "mypass".toCharArray();
@@ -54,5 +58,6 @@ public class Http {
       }
     });
     servers.start();
+    LOG.info("HTTP服务启动成功:{}", 1);
   }
 }

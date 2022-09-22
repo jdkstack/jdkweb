@@ -15,7 +15,11 @@
       <groupId>org.jdkstack</groupId>
       <artifactId>jdkweb-core</artifactId>
       <version>11.0.11</version>
-      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jdkstack</groupId>
+      <artifactId>jdklog-core</artifactId>
+      <version>11.0.11</version>
     </dependency>
   </dependencies>
 

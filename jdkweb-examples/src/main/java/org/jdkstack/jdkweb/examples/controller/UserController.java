@@ -11,9 +11,16 @@ import org.jdkstack.jdkweb.web.annotation.RequestBody;
 import org.jdkstack.jdkweb.web.annotation.RequestMapping;
 import org.jdkstack.jdkweb.web.annotation.RequestParam;
 import org.jdkstack.jdkweb.web.annotation.RestController;
+import org.jdkstack.logging.jdklog.api.spi.Log;
+import org.jdkstack.logging.jdklog.core.factory.LogFactory;
 
 /**
- * 处理请求的接口(相当于Servlet) . 1: 无参数(任意类型的Http请求)需要参考HTTP规范 . 2: 一个参数(POST PUT @RequestBody) . 3: 任意参数(GET @RequestParam @PathVariable).
+ * 处理请求的接口(相当于Servlet) .
+ * <pre>
+ * 1: 无参数(任意类型的Http请求)需要参考HTTP规范 .
+ * 2: 一个参数(POST PUT @RequestBody) .
+ * 3: 任意参数(GET @RequestParam @PathVariable).
+ * </pre>
  *
  * @author admin
  */
@@ -21,11 +28,14 @@ import org.jdkstack.jdkweb.web.annotation.RestController;
 @RequestMapping("/user")
 public class UserController {
 
+  private static final Log LOG = LogFactory.getLog(UserController.class);
+
   @GetMapping("/users")
   public List<Map<String, Object>> users(
       @RequestParam("recipient") final String recipient,
       @RequestParam("x") final String x,
       @RequestParam("y") final String y) {
+    LOG.info("接受到请求参数是:recipient={},x={},y={}", recipient, x, y);
     final List<Map<String, Object>> list = new ArrayList<>();
     for (int i = 0; i < 10; i++) {
       final Map<String, Object> data = new HashMap<>();
